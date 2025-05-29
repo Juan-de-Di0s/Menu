@@ -1,0 +1,184 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    overflow: hidden;
+    padding: 0;
+}
+
+#body {
+    transition: background ease .5s;
+    position: absolute;
+    width: 300vw;
+    height: 300vh;
+    top: 0;
+    left: 0;
+    background-color: green;
+}
+
+input {
+    display: none;
+}
+
+label.iconos {
+    transition: transform ease .5s, color ease .5s;
+    font-size: 24px;
+    position: absolute;
+    z-index: 3;
+    color: grey;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+label.casa {
+    transform: translate(-135px,-20px);
+}
+label.buscar {
+    transform: translate(-50px,-20px);
+}
+label.like {
+    transform: translate(30px,-20px);
+}
+label.noti {
+    transform: translate(120px,-20px);
+}
+
+div#caja {
+    z-index: 1;
+    background-color: white;
+    width: 365px;
+    height: 100px;
+    box-shadow: 0px 1px 6px black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+span.titulo {
+    transition: color .5s, transform .5s, opacity .5s;
+    font-size: 14px;
+    position: absolute;
+    z-index: 2;
+    color: gray;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+
+span.casa {
+    transform: translate(-135px,28px);
+}
+span.buscar {
+    transform: translate(-50px,28px);
+}
+span.like {
+    transform: translate(33px,28px);
+}
+span.noti {
+    transform: translate(98px,28px);
+}
+
+#uno:checked~label.casa {
+    transform: translate(-135px,-68px);
+    color: green;
+}
+#dos:checked~label.buscar {
+    transform: translate(-48px,-64px);
+    color: blue;
+}
+#tres:checked~label.like {
+    transform: translate(30px,-68px);
+    color: orangered;
+}
+#cuatro:checked~label.noti {
+    transform: translate(120px,-68px);
+    color: rebeccapurple;
+}
+
+#uno:checked~div#body {
+    background-color: green;
+}
+#dos:checked~div#body {
+    background-color: blue;
+}
+#tres:checked~div#body {
+    background-color: orangered;
+}
+#cuatro:checked~div#body {
+    background-color: rebeccapurple;
+}
+
+#uno:checked~span.casa {
+    opacity: 1;
+    color: green;
+    font-weight: bold;
+    transform: translate(-135px,0px);
+}
+#dos:checked~span.buscar {
+    opacity: 1;
+    color: blue;
+    font-weight: bold;
+    transform: translate(-50px,0px);
+}
+#tres:checked~span.like {
+    opacity: 1;
+    color: orangered;
+    font-weight: bold;
+    transform: translate(33px,0px);
+}
+#cuatro:checked~span.noti {
+    opacity: 1;
+    color: rebeccapurple;
+    font-weight: bold;
+    transform: translate(98px,0px);
+}
+
+div.bordes {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 6px solid green;
+    width: 45px;
+    height: 45px;
+    background-color: white;
+    transition: border .5s, transform .5s, border-radius .3s;
+}
+
+#uno:checked~div.bordes {
+    border: 6px solid green;
+    transform: translate(-144px,-75px);
+    border-radius: 0px;
+}
+#dos:checked~div.bordes {
+    border: 6px solid blue;
+    transform: translate(-60px,-75px);
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+}
+#tres:checked~div.bordes {
+    border: 6px solid orangered;
+    transform: translate(22px,-75px);
+    transform-origin: center center;
+    outline-color: orangered;
+    border-radius: 0px 0px 50px 50px;
+}
+#cuatro:checked~div.bordes {
+    border: 6px solid rebeccapurple;
+    transform: translate(110px,-75px);
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+}
+
+span {
+    cursor: pointer;
+}
